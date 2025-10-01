@@ -28,7 +28,7 @@ jobs:
           coverage run --rcfile=.coveragerc -m pytest test/unit/test_dropbox_unit.py
           coverage xml
       - name: Publish Coverage
-        uses: codecov/codecov-action@v3.1.6
+        uses: codecov/codecov-action@v5.5.1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           flags: unit
@@ -67,7 +67,7 @@ jobs:
           coverage run --rcfile=.coveragerc -m pytest test/integration/test_dropbox.py
           coverage xml
       - name: Publish Coverage
-        uses: codecov/codecov-action@v3.1.6
+        uses: codecov/codecov-action@v5.5.1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           flags: integration
